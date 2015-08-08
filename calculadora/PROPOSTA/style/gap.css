@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: monospace;
+    font-size: 24pt;
+}
+body {
+    margin: 0 auto;
+    width: 20em;
+}
+
+section {
+    margin: 1em;
+    padding: 1em;
+    outline: dashed 0.1em grey;
+}
+
+input, button {
+    float: left;
+    background: darkgray;
+    outline: solid 0.1em gray;
+    height: 2em;
+}
+
+input {
+    width: 11em;
+    padding: 0 0.5em;
+    text-align: right;
+}
+
+button {
+    width: 4em;
+}
+
+button:hover {
+    background: gray;
+}
+
+.clearfix {
+    clear: both;
+}
+
+@media (max-width: 40em) {
+}

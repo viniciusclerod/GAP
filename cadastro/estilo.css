@@ -1,0 +1,12 @@
+body {
+    margin: 2em auto;
+    width: 20em;
+}
+form {
+    border: dashed 1px dimgray;
+    padding: 1em;
+}
+form label, form input {
+    display: block;
+    width: 100%;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <script src="requestor.js"></script>
+    <script>
+        window.onload = function(){
+            var res = server.get('http://viacep.com.br/ws/63040630/json');
+            var data = JSON.parse(res);
+            $('main').innerHTML = data.logradouro;
+        };
+    </script>
+</head>
+<body>
+    <main>
+        <img src="preload.gif"><br/>
+        Carregando...
+    </main>
+</body>
+</html>

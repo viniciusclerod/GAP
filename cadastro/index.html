@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="estilo.css"/>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function(){
+            $('input[name=cep]').onblur = function(){
+                var cep = this.value;
+                var res = JSON.parse(
+                        server('http://viacep.com.br/ws/'+cep+'/json/')
+                );
+                $('input[name=logradouro]').value = res.logradouro;
+                $('input[name=complemento]').value = res.complemento;
+                $('input[name=bairro]').value = res.bairro;
+                $('input[name=localidade]').value = res.localidade;
+                $('input[name=uf]').value = res.uf;
+                $('input[name=ibge]').value = res.ibge;
+            };
+
+        }
+    </script>
+</head>
+<body>
+<main>
+    <header>
+        <h1>Cadastro com CEP</h1>
+    </header>
+    <section>
+        <form>
+            <p>
+                <label>CEP:</label>
+                <input type="text" name="cep" />
+            </p>
+            <p>
+                <label>Logradouro:</label>
+                <input type="text" name="logradouro" disabled />
+            </p>
+            <p>
+                <label>Complemento:</label>
+                <input type="text" name="complemento" />
+            </p>
+            <p>
+                <label>Bairro:</label>
+                <input type="text" name="bairro" disabled />
+            </p>
+            <p>
+                <label>Localidade:</label>
+                <input type="text" name="localidade" disabled />
+            </p>
+            <p>
+                <label>UF:</label>
+                <input type="text" name="uf" disabled />
+            </p>
+            <p>
+                <label>IBGE:</label>
+                <input type="text" name="ibge" disabled />
+            </p>
+        </form>
+    </section>
+</main>
+</body>
+</html>
