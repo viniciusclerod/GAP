@@ -1,0 +1,64 @@
+body, main, main > * {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+main {
+    background: yellow;
+    width: 36em;
+    margin: 0 auto;
+}
+main > header {
+    background: #D5D95F;
+    padding: 0.5em 0;
+}
+main > header > h1 {
+    float: left;
+    margin: 0;
+    width: 12rem;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 1rem;
+    text-indent: -9999rem;
+    height: 4rem;
+}
+main > header > nav {
+    float: left;
+    width: 24rem;
+    text-align: right;
+}
+main > header > nav > ul {
+    margin: 1rem;
+    padding: 0;
+    list-style: none;
+    background: #F2F2E9;
+    display: inline-block;
+    text-align: center;
+}
+main > header > nav > ul > li {
+    display: inline-block;
+}
+main > header > nav > ul > li > a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    text-decoration: none;
+    color: #BF3604;
+}
+main > header > nav > ul > li > a:hover {
+    background: #A1A624;
+    color: #252628;
+}
+.clearfix {
+    clear: both;
+}
+
+@media only screen and (max-width: 36rem) {
+    body {
+        background: red;
+    }
+}
