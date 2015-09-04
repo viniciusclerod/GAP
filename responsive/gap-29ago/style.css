@@ -57,6 +57,11 @@ main > header > nav > ul > li > a:hover {
     clear: both;
 }
 
+@media only screen and (max-width: 40rem) {
+    body {
+        background: green;
+    }
+}
 @media only screen and (max-width: 36rem) {
     body {
         background: red;
